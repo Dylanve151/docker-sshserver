@@ -2,4 +2,5 @@
 
 touch /config/authorized_keys
 
+echo "Starting SSH server"
 /usr/sbin/sshd -D
