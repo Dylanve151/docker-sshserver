@@ -6,5 +6,4 @@ RUN echo "AuthorizedKeysFile /config/authorized_keys" > /etc/ssh/sshd_config.d/A
 VOLUME ["/config"]
 RUN touch /config/authorized_keys
 RUN mkdir /run/sshd
-CMD [ "/bin/bash" ]
-#CMD [ "/usr/sbin/sshd -d" ]
+CMD [ "/usr/sbin/sshd -d" ]
