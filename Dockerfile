@@ -6,4 +6,6 @@ RUN echo "AuthorizedKeysFile /config/authorized_keys" > /etc/ssh/sshd_config.d/A
 VOLUME ["/config"]
 RUN touch /config/authorized_keys
 RUN mkdir /run/sshd
-CMD [ "/usr/sbin/sshd -d" ]
+COPY startup .
+RUN chmod 775 startup
+CMD [ "/startup" ]
